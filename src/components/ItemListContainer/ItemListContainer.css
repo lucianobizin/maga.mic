@@ -1,0 +1,13 @@
+.products-heading {
+    text-align: center;
+    margin-top: 4vh;
+    margin-bottom: 3vh;
+    color: #333;
+    font-size: 24px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: color 0.3s ease-in-out;
+}
+
+.products-heading:hover {
+    color: #de0a5a;
+}

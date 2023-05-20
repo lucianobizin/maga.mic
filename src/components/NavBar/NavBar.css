@@ -1,0 +1,270 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Calibri', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+.title {
+    display: inline-block;
+    font-size: 1.75rem;
+    color: #ffffff;
+    animation: nameAnimation 1s ease-in-out infinite alternate;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+header {
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #005f73;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header:hover {
+    background-color: #007791;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes nameAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+.navbar-btn {
+    background-color: #005f73;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 2.5vw;
+}
+
+.navbar-btn {
+    height: 7vh;
+    object-fit: contain;
+    padding: 10px;
+    background-color: #005f73;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-btn--img {
+    height: 100%;
+    object-fit: contain;
+}
+
+nav {
+    height: 100vh;
+    background-color: #de0a5a;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 20px;
+    padding-top: 10vh;
+}
+
+nav.open {
+    transform: translateX(0);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: block;
+    margin: 1rem;
+    cursor: pointer;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    background-color: #007791;
+    color: #fff;
+}
+
+.navbar-close {
+    background-color: #de0a5a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease-in-out;
+    padding: 16px 16px;
+    border-radius: 4px;
+}
+
+.navbar-close--img {
+    height: 7vh;
+    padding: 10px;
+    object-fit: contain;
+    background-color: #de0a5a;
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 50%;
+}
+
+
+
+.navbar-close--img:hover {
+    background-color: #007791;
+}
+
+/* Pantallas pequeñas */
+@media screen and (min-width: 480px) {
+
+    /* Estilos para pantallas de 480px o más */
+    header {
+        padding: 10px;
+    }
+
+    nav {
+        flex-direction: row;
+        width: 100%;
+        padding-right: 10px;
+        align-items: flex-start;
+    }
+
+    .navbar-close-btn {
+        margin-top: 10px;
+        padding: 0.5rem 0.8rem;
+        font-size: 1.25rem;
+        cursor: pointer
+    }
+}
+
+/* Pantallas grandes */
+@media screen and (min-width: 1024px) {
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    .navbar-btn {
+        padding: 8px;
+    }
+
+    nav {
+        padding-right: 30px;
+    }
+
+    li {
+        font-size: 1.4rem;
+    }
+
+    .navbar-close-btn {
+        margin-top: 1.5rem;
+        padding: 0.7rem 1.2rem;
+    }
+}
+
+/* Pantallas grandes a extra grandes */
+@media screen and (min-width: 1200px) {
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    nav {
+        padding-right: 40px;
+    }
+
+    li {
+        font-size: 1.6rem;
+    }
+
+    .navbar-close-btn {
+        margin-top: 2rem;
+        padding: 0.9rem 1.5rem;
+    }
+}
+
+/* Pantallas extra grandes */
+@media screen and (min-width: 1440px) {
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    nav {
+        padding-right: 50px;
+    }
+
+    li {
+        font-size: 1.6rem;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 5vh;
+        font-size: 1.6rem;
+    }
+
+    .navbar-close-btn {
+        margin-top: 3.5rem;
+        padding: 1rem 2rem;
+        font-size: 1.3rem;
+    }
+}
+
+/* Pantallas 4K 
+
+/ Estilos para pantallas de 3840px o más */
+
+@media screen and (min-width: 3840px) {
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    nav {
+        padding-right: 60px;
+    }
+
+    li {
+        font-size: 2.4rem;
+    }
+
+    .navbar-close-btn {
+        margin-top: 3rem;
+        padding: 1.2rem 2.5rem;
+        font-size: 1.5rem;
+    }
+}
