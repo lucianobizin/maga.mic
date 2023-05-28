@@ -8,7 +8,8 @@ const ItemListContainer = () => {
     const [products, setProducts] = useState([]);
     const { idCategory } = useParams();
 
-    useEffect(() => {
+    useEffect( () => {
+
         const productsFunction = idCategory ? getProductByCategory : getProducts;
 
         productsFunction(idCategory)
@@ -18,7 +19,7 @@ const ItemListContainer = () => {
 
     return (
         <>
-            <h2 className="products-heading"> PRDOCUTS 4 YOU </h2>
+            <h2 className="products-heading"> PRODUCTS 4 YOU </h2>
             <ItemList products={products} />
         </>
     )

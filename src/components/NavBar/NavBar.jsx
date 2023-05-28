@@ -26,7 +26,7 @@ const NavBar = () => {
 
                 <nav className={openNavbar ? 'open' : ''}>
                     <button className="navbar-close" onClick={openMenu}>
-                        <img className="navbar-close--img" src={navBtnClose} alt="Boton de cruz para cerrar NavBar" />
+                        <img className="navbar-close--img" src={navBtnClose} alt="Cross button to close NavBar" />
                     </button>
                     <ul>
                         <li className="nav-links" onClick={openMenu}><NavLink to={`/category/Astrology`}>Astrology</NavLink></li>
@@ -39,7 +39,7 @@ const NavBar = () => {
                 </nav>
 
                 <button className="navbar-btn" onClick={openMenu}>
-                    <img className="navbar-btn--img" src={navBtnImg} alt="Mano sosteniendo tres cartas de tarot" />
+                    <img className="navbar-btn--img" src={navBtnImg} alt="Hand holding three tarot cards" />
                 </button>
 
                 <CartWidget />
