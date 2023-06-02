@@ -23,10 +23,11 @@ const ItemCount = ({initial, stock, addingFunction} ) => {
             <div>
                 <button onClick={decrease}> - </button>
                 <p> {counter} </p>
+                {console.log(counter)}
                 <button onClick={increase}> + </button>
             </div>
 
-            <button onClick={() => addingFunction(counter)}> Add to Cart </button >
+            <button onClick={() => console.log(addingFunction(counter))}> Add to Cart </button >
         </>
     )
 }

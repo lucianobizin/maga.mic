@@ -12,15 +12,16 @@ const ItemDetail = ({ id, name, price, deliverables, image, stock }) => {
 
     // De dónde sale quantity (counter de ItemCount?)
     const quantityHandler = (quantity) => {
-
-        setAddQuantity(quantity);
+        console.log(quantity)
+        setAddQuantity(quantity)
 
         const item = { id, name, price }
-
+        console.log(item)
         addingProduct(item, quantity);
     }
 
     return (
+        
         <div className='ItemContainer'>
             <div className='ItemContainer-info'>
                 <h2 className='ItemContainer-h2'>{name}</h2>
