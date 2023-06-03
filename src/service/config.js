@@ -2,7 +2,7 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore"
 
 const firebaseConfig = {
-    apiKey: "AIzaSyD0WhpXhLdHU1AjQlb-U30kfvq6HY4tco0",
+    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
     authDomain: "maga-mic.firebaseapp.com",
     projectId: "maga-mic",
     storageBucket: "maga-mic.appspot.com",

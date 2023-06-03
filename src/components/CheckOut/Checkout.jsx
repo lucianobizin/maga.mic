@@ -6,7 +6,7 @@ import { collection, addDoc } from "firebase/firestore"
 
 const Checkout = () => {
 
-    const {cart, emptyCart, total } = useContext(CartContext)
+    const { cart, emptyCart, total } = useContext(CartContext)
     const [name, setName] = useState("")
     const [surnname, setSurname] = useState("")
     const [telephone, setTelephone] = useState("")
@@ -47,7 +47,6 @@ const Checkout = () => {
                 emptyCart()
             })
             .catch((error) => {
-                console.log(error)
                 setError("An errer occurred, please, come back in a few minutes again")
             })
     }
@@ -90,14 +89,16 @@ const Checkout = () => {
                 </div>
 
                 {
-                    error && <p style={{color:"red"}}> { error } </p>
+                    error && <p style={{ color: "red" }}> {error} </p>
                 }
 
                 <button type="submit"> End order </button>
 
                 {
                     idOrder && (
-                        <strong>Thank you so much for your purchase! Your order ID is: {idOrder} </strong>
+                        <div>
+                            <strong>Thank you so much for your purchase! Your order ID is: {idOrder} </strong>
+                        </div>
                     )
                 }
 
