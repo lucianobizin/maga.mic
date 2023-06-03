@@ -1,18 +1,33 @@
-button {
-    background-color: aqua;
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-item {
+    background-color: #006073;
     border: none;
     color: black;
-    padding: 10px 20px;
+    padding: 5px 10px;
     text-align: center;
     text-decoration: none;
+    border-radius: 10px;
     display: inline-block;
     font-size: 1rem;
     margin: 5px;
     cursor: pointer;
 }
 
+.button-item-addToCart{
+    background-color: #de0a5a;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin: 10px;
+}
+
 p {
-    font-size: 24px;
+    font-size: 1rem;
     font-weight: bold;
     margin: 0 10px;
 

@@ -18,7 +18,7 @@ body {
 }
 
 header {
-    height: 8vh;
+    height: 7vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,11 +28,13 @@ header {
     overflow: hidden;
     transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(45deg, #004a59, #de0a5a);
 }
 
 header:hover {
     background-color: #007791;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(45deg, #006073, #de0a5a);
 }
 
 @keyframes nameAnimation {
@@ -74,6 +76,7 @@ header:hover {
 nav {
     height: 100vh;
     background-color: #de0a5a;
+    background: linear-gradient(45deg, #006073, #de0a5a);
     position: fixed;
     top: 0;
     right: 0;
@@ -91,6 +94,7 @@ nav {
 
 nav.open {
     transform: translateX(0);
+    z-index: 2;
 }
 
 ul {
@@ -109,7 +113,7 @@ li {
 
 .nav-links a {
     text-decoration: none;
-    color: #333;
+    color: #171313;
     padding: 8px 16px;
     border-radius: 4px;
     transition: background-color 0.3s ease-in-out;
@@ -121,8 +125,8 @@ li {
 }
 
 .navbar-close {
-    background-color: #de0a5a;
     color: white;
+    background: #ffffff00;
     border: none;
     cursor: pointer;
     font-size: 1.2rem;
@@ -140,16 +144,15 @@ li {
     border-radius: 50%;
 }
 
-
-
 .navbar-close--img:hover {
     background-color: #007791;
 }
 
-/* Pantallas pequeñas */
+/* Responsive Styles */
+
+/* Small screens */
 @media screen and (min-width: 480px) {
 
-    /* Estilos para pantallas de 480px o más */
     header {
         padding: 10px;
     }
@@ -165,13 +168,12 @@ li {
         margin-top: 10px;
         padding: 0.5rem 0.8rem;
         font-size: 1.25rem;
-        cursor: pointer
+        cursor: pointer;
     }
 }
 
-/* Pantallas grandes */
+/* Large screens */
 @media screen and (min-width: 1024px) {
-
     h1 {
         font-size: 1.4rem;
     }
@@ -194,14 +196,13 @@ li {
     }
 }
 
-/* Pantallas grandes a extra grandes */
+/* Extra large screens */
 @media screen and (min-width: 1200px) {
-
     h1 {
         font-size: 1.5rem;
     }
 
-    nav {
+    css Copy code nav {
         padding-right: 40px;
     }
 
@@ -215,9 +216,8 @@ li {
     }
 }
 
-/* Pantallas extra grandes */
+/* Extra large screens */
 @media screen and (min-width: 1440px) {
-
     h1 {
         font-size: 2rem;
     }
@@ -244,12 +244,8 @@ li {
     }
 }
 
-/* Pantallas 4K 
-
-/ Estilos para pantallas de 3840px o más */
-
+/* 4K screens */
 @media screen and (min-width: 3840px) {
-
     h1 {
         font-size: 1.5rem;
     }
