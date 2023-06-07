@@ -2,6 +2,8 @@ import { useContext, useState } from "react"
 import { CartContext } from "../context/CartContext"
 import { db } from "../../service/config"
 import { collection, addDoc } from "firebase/firestore"
+import { Link } from "react-router-dom"
+import './Checkout.css'
 
 
 const Checkout = () => {
@@ -52,7 +54,7 @@ const Checkout = () => {
     }
 
     return (
-        <div>
+        <div className="container">
             <h2>Checkout</h2>
             <form onSubmit={submitHandler}>
 
@@ -68,40 +70,47 @@ const Checkout = () => {
                 }
                 <hr />
                 <div>
-                    <label htmlFor="">Name</label>
+                    <label className="form-labels" htmlFor="">Name</label>
                     <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
                 </div>
                 <div>
-                    <label htmlFor="">Surname</label>
+                    <label className="form-labels" htmlFor="">Surname</label>
                     <input type="text" value={surnname} onChange={(e) => setSurname(e.target.value)} />
                 </div>
                 <div>
-                    <label htmlFor="">Email</label>
+                    <label className="form-labels" htmlFor="">Email</label>
                     <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
                 </div>
                 <div>
-                    <label htmlFor="">Email confirmation</label>
+                    <label className="form-labels" htmlFor="">Email confirmation</label>
                     <input type="email" value={emailConfirmation} onChange={(e) => setEmailConfirmation(e.target.value)} />
                 </div>
                 <div>
-                    <label htmlFor="">Telephone</label>
+                    <label className="form-labels" htmlFor="">Telephone</label>
                     <input type="text" value={telephone} onChange={(e) => setTelephone(e.target.value)} />
                 </div>
 
-                {
-                    error && <p style={{ color: "red" }}> {error} </p>
-                }
+                {error && !idOrder && (
+                    <p className="error-message">{error}</p>
+                )}
 
-                <button type="submit"> End order </button>
+                <button type="submit" disabled={idOrder}>
+                    {idOrder ? "Order Placed" : "End Order"}
+                </button>
 
-                {
-                    idOrder && (
-                        <div>
-                            <strong>Thank you so much for your purchase! Your order ID is: {idOrder} </strong>
-                        </div>
-                    )
-                }
+                {idOrder && (
+                    <Link to="/market" className="back-to-market-button">
+                        Back to Market
+                    </Link>
+                )}
 
+                {idOrder && (
+                    <div className="order-id">
+                        <strong>
+                            Thank you so much for your purchase! Your order ID is: {idOrder}
+                        </strong>
+                    </div>
+                )}
             </form>
         </div>
     )

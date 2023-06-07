@@ -1,5 +1,5 @@
 .cardProduct {
-    width: 30%;
+    width: 340px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;

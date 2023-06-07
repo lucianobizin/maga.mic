@@ -1,0 +1,132 @@
+/* Estilos para los elementos del carrito */
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart-item-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+}
+
+.cart-item-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.cart-item-price {
+    font-size: 16px;
+    color: #777;
+}
+
+.cart-item-quantity {
+    font-size: 14px;
+    color: #777;
+}
+
+.btns {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.cart-total {
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.cart-total-label {
+    font-size: 18px;
+    color: #555;
+}
+
+.cart-total-amount {
+    font-size: 20px;
+}
+
+.empty-cart-button {
+    background-color: #de0a5a;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 25px;
+}
+
+.end-purchase-button {
+    background-color: #de0a5a;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 25px;
+}
+
+.empty-cart-button:hover,
+.end-purchase-button:hover {
+    background-color: #007791;
+}
+
+.empty-cart-button {
+    background-color: #de0a5a;
+}
+
+.empty-cart-button:hover {
+    background-color: #007791;
+}
+
+/* Estilos para la disposición del carrito */
+.cart-container:before,
+.cart-container:after {
+    content: "";
+    display: table;
+}
+
+.cart-container:after {
+    clear: both;
+}
+
+.cart-container {
+    zoom: 1;
+}
+
+.container {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.empty-cart-message {
+    font-size: 20px;
+    color: #888;
+}
+
+.back-to-market-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.back-to-market-button:hover {
+    background-color: #555;
+}

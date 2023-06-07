@@ -1,15 +1,17 @@
-.frontpage-image {
+.frontpage-image{
     width: 100%;
     height: 100%;
+    opacity: 0.95;
     object-fit: contain;
-    filter: grayscale(20%); /* Add a slight grayscale effect */
-    opacity: 0.9; /* Reduce the opacity for a subtle effect */
     transition: opacity 0.3s ease-in-out; /* Add a smooth transition on hover */
 }
 
-.frontpage-image:hover {
-    opacity: 1; /* Increase the opacity on hover */
-    
+.dark-gradient {
+    width: 100%;
+    height: 100%;
+    opacity: 1.0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1;
 }
 
 .market-button {
@@ -34,7 +36,3 @@
     background-color: #1565c0; /* Darken the button background color on hover */
 }
 
-.market-button:focus {
-    outline: none; /* Remove the default focus outline */
-    box-shadow: 0 0 0 3px #64b5f6; /* Add a custom focus style with a light blue shadow */
-}

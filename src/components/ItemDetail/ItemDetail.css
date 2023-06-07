@@ -5,9 +5,28 @@
     padding: 2rem;
     border-radius: 10px;
     background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     position: relative;
     perspective: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ItemContainer-div{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.ItemContainer-btn{
+    background-color: #de0a5a;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 1rem;
+    text-decoration: none;
 }
 
 .ItemContainer-h2 {

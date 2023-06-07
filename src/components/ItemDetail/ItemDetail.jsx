@@ -15,13 +15,13 @@ const ItemDetail = ({ id, name, price, deliverables, image, stock }) => {
         console.log(quantity)
         setAddQuantity(quantity)
 
-        const item = { id, name, price }
+        const item = { id, name, price, image }
         console.log(item)
         addingProduct(item, quantity);
     }
 
     return (
-        
+
         <div className='ItemContainer'>
             <div className='ItemContainer-info'>
                 <h2 className='ItemContainer-h2'>{name}</h2>
@@ -33,7 +33,11 @@ const ItemDetail = ({ id, name, price, deliverables, image, stock }) => {
             <img className='ItemContainer-img' src={image} alt={name} />
 
             {
-                addQuantity > 0 ? (<Link to="/cart"> End purchase </Link>) : (<ItemCount initial={1} stock={stock} addingFunction={quantityHandler} />)
+                addQuantity > 0 ? (<div className="ItemContainer-div">
+                    <Link className="ItemContainer-btn" to="/cart"> End purchase </Link>
+                    <Link className="ItemContainer-btn" to="/market"> Continue buying</Link>
+                    </div>) : 
+                    (<ItemCount initial={1} stock={stock} addingFunction={quantityHandler} />)
             }
 
         </div>
