@@ -1,7 +1,7 @@
 import "./ItemDetail.css"
 import { useState, useContext } from "react";
 import ItemCount from "../ItemCount/ItemCount"
-import { CartContext } from "../context/CartContext";
+import { CartContext } from "../../context/CartContext";
 import { Link } from 'react-router-dom';
 
 const ItemDetail = ({ id, name, price, deliverables, image, stock }) => {
@@ -12,13 +12,12 @@ const ItemDetail = ({ id, name, price, deliverables, image, stock }) => {
 
     // De dónde sale quantity (counter de ItemCount?)
     const quantityHandler = (quantity) => {
-        console.log(quantity)
         setAddQuantity(quantity)
 
         const item = { id, name, price, image }
-        console.log(item)
         addingProduct(item, quantity);
     }
+
 
     return (
 

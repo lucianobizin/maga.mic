@@ -1,5 +1,5 @@
 import { useContext, useState } from "react"
-import { CartContext } from "../context/CartContext"
+import { CartContext } from "../../context/CartContext"
 import { db } from "../../service/config"
 import { collection, addDoc } from "firebase/firestore"
 import { Link } from "react-router-dom"
@@ -94,7 +94,7 @@ const Checkout = () => {
                     <p className="error-message">{error}</p>
                 )}
 
-                <button type="submit" disabled={idOrder}>
+                <button type="submit" disabled={idOrder} className="btn-order">
                     {idOrder ? "Order Placed" : "End Order"}
                 </button>
 

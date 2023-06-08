@@ -11,7 +11,7 @@ const FrontPage = () => {
     };
 
 
-    const [isHovered, setIsHovered] = useState("");
+    const [isHovered, setIsHovered] = useState("frontpage-image");
 
     const handleMouseEnter = () => {
         setIsHovered('dark-gradient');

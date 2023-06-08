@@ -1,6 +1,7 @@
 .frontpage-image{
     width: 100%;
     height: 100%;
+    filter: grayscale(100%);
     opacity: 0.95;
     object-fit: contain;
     transition: opacity 0.3s ease-in-out; /* Add a smooth transition on hover */
@@ -33,6 +34,8 @@
 }
 
 .market-button:hover {
-    background-color: #1565c0; /* Darken the button background color on hover */
+    background-color: #de0a5a; /* Darken the button background color on hover */
 }
+
+
 

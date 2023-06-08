@@ -1,7 +1,7 @@
 import './CartWidget.css'
 import imgCarrito from './carrito.png'
 import { Link } from 'react-router-dom'
-import { CartContext } from '../context/CartContext'
+import { CartContext } from '../../context/CartContext'
 import { useContext } from 'react'
 
 const CartWidget = () => {

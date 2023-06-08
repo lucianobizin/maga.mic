@@ -9,6 +9,7 @@ const ItemCount = ({initial, stock, addingFunction} ) => {
     const increase = () => {
         if (counter < stock) {
             setCounter(counter + 1);
+
         }
     }
 
